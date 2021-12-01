@@ -90,7 +90,7 @@ public class SonarSweepPart2 {
     public static void main(String[] args) {
         int count = 0;
         int currentSum = -1;
-        for (int i = 0; i < INPUT.size() - 2; i++) {
+        for (int i = 0; i < INPUT.size() - (WINDOW_SIZE - 1); i++) {
             int sum = INPUT.subList(i, i + WINDOW_SIZE).stream().mapToInt(integer -> integer).sum();
             if (currentSum == -1) {
                 currentSum = sum;
